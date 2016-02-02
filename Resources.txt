@@ -1,0 +1,8 @@
+Resources
+http://ohthethingsyoucanbuy.com/ <--  random stuff with good structure to scrape
+
+http://webscraper.io/ <-- scraper, outputs to CSV
+
+http://techslides.com/convert-csv-to-json-in-javascript <-- convert csv to json
+
+https://jsonformatter.curiousconcept.com/ <-- clean up json to make it easier to read
