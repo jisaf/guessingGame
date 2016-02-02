@@ -11,8 +11,21 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>The price is (almost) right!</h1>
-	<h3>Can you guess the price of this random product from Amazon?</h3>
+	<div class="container">
+		<div class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation" class="active"><a href="#">Home</a></li>
+					<li role="presentation"><a href="#">About</a></li>
+					<li role="presentation"><a href="#">Source Code</a></li>
+				</ul>
+			</nav>
+			<h3 class="text-muted">The Guessing Game</h3>
+		</div>
+		<div class="jumbotron">
+			<h1>The price is (almost) right!</h1>
+			<p class="lede">Can you guess the price of this random product from Amazon?</p>
+		</div>
 <!-- hide this row until info clicked-->
 	<p>Rules:</p>
 	<ul>
@@ -20,8 +33,23 @@
 		<li>You have to guess to the nearest dollar</li>
 		<li>You will get hints if you're over or under</li>
 		<li>These are all real items...that doesn't mean they are reasonably priced</li>
+	</ul>
+	<!-- end hiding -->
 	<p>Portable Pocket SNES Console</p>
 	<img src="http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/05/Portable-Pocket-SNES-Console.jpg?fit=400" alt="Portable Pocket SNES Console" />
+	<p>
+		So. How much does it sell for on Amazon?
+	</p>
+	<form>
+		<input type="number" name="guess">
+		<input type="submit" name="Guess!">
+	</form>
+	<div id="response"><p>You were too high/too low/right!!</p></div> <!-- hide this div until there's a guess, add it in with text depending on the guess result -->
+	<div id="guesses">
+		<div class="guess"><p class="low">10</p></div>
+		<div class="guess"><p class="high">550</p></div>
+		<!-- color divs based on range from 0-2X where X is price? -->
+	</div>
 
 </body>
 </html>
