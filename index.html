@@ -15,16 +15,16 @@
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
+					<a class="navbar-brand" href="#">The Guessing Game</a>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">The Guessing Game</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
+					<ul class="nav navbar-nav navbar-right">
 						<li class="active"><a href="#">Home</a></li>
 						<li><a href="#">About</a></li>
 						<li><a href="#">Source Code</a></li>
@@ -32,35 +32,60 @@
 				</div>
 			</div>
 		</nav>
-		<h3 class="text-muted">The Guessing Game</h3>
 		<div class="jumbotron">
 			<h1>The price is (almost) right!</h1>
-			<p class="lede">Can you guess the price of this random product from Amazon?</p>
+			<p class="col-md-12 lede">Can you guess the price of this random product from Amazon?</p>
+			<!-- <div class="col-md-1 col-md-offset-1">
+				<button type="button" class="btn btn-default pull-right" data-toggle="collapse" data-target="#rules">
+					<span class="sr-only">Rules</span>
+					<span class="glyphicon glyphicon-info-sign"></span>
+				</button>
+			</div>
+			<div id="rules" class="col-md-10 collapse">
+				<p>Rules:</p>
+				<ul>
+					<li>You have 5 guesses</li>
+					<li>You have to guess to the nearest dollar</li>
+					<li>You will get hints if you're over or under</li>
+					<li>These are all real items...that doesn't mean they are reasonably priced</li>
+				</ul>
+			</div> -->
 		</div>
-<!-- hide this row until info clicked-->
-	<div class=""
-	<p>Rules:</p>
-	<ul>
-		<li>You have 5 guesses</li>
-		<li>You have to guess to the nearest dollar</li>
-		<li>You will get hints if you're over or under</li>
-		<li>These are all real items...that doesn't mean they are reasonably priced</li>
-	</ul>
-	<!-- end hiding -->
-	<p>Portable Pocket SNES Console</p>
-	<img src="http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/05/Portable-Pocket-SNES-Console.jpg?fit=400" alt="Portable Pocket SNES Console" />
-	<p>
-		So. How much does it sell for on Amazon?
-	</p>
-	<form>
-		<input type="number" name="guess">
-		<input type="submit" name="Guess!">
-	</form>
-	<div id="response"><p>You were too high/too low/right!!</p></div> <!-- hide this div until there's a guess, add it in with text depending on the guess result -->
-	<div id="guesses">
-		<div class="guess"><p class="low">10</p></div>
-		<div class="guess"><p class="high">550</p></div>
-		<!-- color divs based on range from 0-2X where X is price? -->
+		<div>
+			<div class="col-md-6 col-sm-6">
+				<div class="well">
+					<p>Portable Pocket SNES Console: How much does it sell for on Amazon?</p>
+				</div>
+				<div class="col-md-12 col-sm-12">
+					<form class="form-inline">
+						<div class="form-group">
+							<label class="sr-only" for="guess">Amount (in dollars)</label>
+							<div class="input-group">
+								<div class="input-group-addon">$</div>
+									<input type="text" class="form-control" id="guess" placeholder="Amount">
+								<div class="input-group-addon">.00</div>
+							</div>
+							<button type="submit" class="btn btn-primary" id="guess">Guess!</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-12 col-sm-12">
+					<br />
+					<table class="table table-bordered table-responsive">
+						<tr>
+							<td class="success"> up </td> <!-- use sprites for closer/farther: if (new guess - actual) - (old guess - actual) < 0 = red, otherwise green -->
+							<td class="success"> up </td>
+							<td class="danger"> down </td>
+							<td class="success"> up </td>
+							<td class="success"> up </td>
+					</table>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<img class="img-responsive" src="http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/05/Portable-Pocket-SNES-Console.jpg" alt="Portable Pocket SNES Console" />
+			</div>
+
+		</div>
 	</div>
 
 </body>
