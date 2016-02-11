@@ -42,53 +42,60 @@ function playersGuessSubmission(e){
 function lowerOrHigher(){
 	// add code here
 	var distance = playersGuess - winningNumber; // how far were they?
-	if (guessArray.length < 2) {
-		distance = 0; 
-	} else {
-		distance = playersGuess - winningNumber
+	// console.log("distance ", distance);
+	// console.log("difference ", lastDistance-distance);
+	return guessMessage(distance);
+
+}
+
+function guessMessage(dis){
+	function direcMessage (dis){
+		var drift = (Math.abs(guessArray[guessArray.length-2] - winningNumber)) - (Math.abs(dis)); // (previous guess distance) - (current distance) = drift could use .slice() but that would return an array I would then have to loop over to add.
+		if (drift > 0) {
+			$("#guess"+guessArray.length).addClass("alert alert-success");
+			return "but you're getting closer!";
+		} else if (drift < 0) {
+			$("#guess"+guessArray.length).addClass("alert alert-danger");
+			return "and you're getting farther away...";
+		}
+		//refactored from this code
+	//	var nearfar = "you can always guess again" // if no lastDistance, don't know if closer or farther so be generic
+
+	// 		if (lastDistance) {// if last distance exists, use it to set a new nearfar response
+	// 	if ((Math.abs(lastDistance) - Math.abs(distance)) > 0) {
+	// 		nearfar = "but you're getting closer!";
+	// 		$("#guess"+guessArray.length).addClass("alert alert-success");
+	// 	} else if ((Math.abs(lastDistance) - Math.abs(distance)) < 0) {
+	// 		nearfar = "and you're getting farther away...";
+	// 		$("#guess"+guessArray.length).addClass("alert alert-danger");
+	// 	}
+	// }
 	}
-	console.log("distance ", distance);
-	console.log("difference ", lastDistance-distance);
+
+	function distMessage(dis){
+		if (guessArray.length < 2 && dis > 0) { // distance === 0 already handled with a win condition in checkGuess
+			return "Good first guess, try coming down a bit though" //direcMessage should return nothing here because drift !> 0 so include direction message
+		} else if (guessArray.length < 2 && dis < 0) {
+			return "Good first guess, try going up a bit though"
+		} else if (Math.abs(dis) < 5){
+			return "You're REALLY close!"
+		} else if (Math.abs(dis) > 100){
+			return "Yeah...you don't really know what things cost do you..."
+		} else if (Math.abs(dis) > 50){
+			return "You're pretty far off, "
+		} else if (Math.abs(dis) > 10){
+			return "You're more than $10 off "
+		} else if (Math.abs(dis) > 5){
+			return "So so close...more than $5 off ";
+		}
+	}
+	var distance = dis;
+	var distMessage = distMessage(distance);
+	var direcMessage = direcMessage(distance);
 	
 
 
-//refactor below into guessMessage();
-	var nearfar = "you can always guess again" // if no lastDistance, don't know if closer or farther so be generic
-
-
-	if (lastDistance) {// if last distance exists, use it to set a new nearfar response
-		if ((Math.abs(lastDistance) - Math.abs(distance)) > 0) {
-			nearfar = "but you're getting closer!";
-			$("#guess"+guessArray.length).addClass("alert alert-success");
-		} else if ((Math.abs(lastDistance) - Math.abs(distance)) < 0) {
-			nearfar = "and you're getting farther away...";
-			$("#guess"+guessArray.length).addClass("alert alert-danger");
-		}
-	}
-	if (!lastDistance && distance > 0) { // distance === 0 already handled in checkGuess
-		lastDistance = distance;
-		return "Good first guess, try coming down a bit though"
-	} else if (!lastDistance && distance < 0) {
-		lastDistance = distance;
-		return "Good first guess, try going up a bit though"
-	} else if (Math.abs(distance) < 5){
-		lastDistance = distance;
-		return "You're REALLY close!"
-	} else if (Math.abs(distance) > 100){
-		lastDistance = distance;
-		return "Yeah...you don't really know what things cost do you?"
-	} else if (Math.abs(distance) > 50){
-		lastDistance = distance;
-		return "You're pretty far off, "+ nearfar;
-	} else if (Math.abs(distance) > 10){
-		lastDistance = distance;
-		return "You're more than $10 off " + nearfar;
-	} else if (Math.abs(distance) > 5){
-		lastDistance = distance;
-
-		return "So so close...more than $5 off " + nearfar;
-	}
-
+	return distMessage + " " + direcMessage;
 }
 
 // Check if the Player's Guess is the winning number 
