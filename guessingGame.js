@@ -4,7 +4,6 @@
 var playersGuess,
     winningNumber, 
     guessArray = [],
-    lastDistance; // refactor to use guessArray, we already have this info.
 var item = generateWinningNumber(0,820);
 console.log(item);
 
@@ -23,7 +22,6 @@ function generateWinningNumber(){
 	return item;
 
 }
-//item = generateWinningNumber(0,820);
 
 // Fetch the Players Guess
 
@@ -42,8 +40,6 @@ function playersGuessSubmission(e){
 function lowerOrHigher(){
 	// add code here
 	var distance = playersGuess - winningNumber; // how far were they?
-	// console.log("distance ", distance);
-	// console.log("difference ", lastDistance-distance);
 	return guessMessage(distance);
 
 }
@@ -58,18 +54,6 @@ function guessMessage(dis){
 			$("#guess"+guessArray.length).addClass("alert alert-danger");
 			return "and you're getting farther away...";
 		}
-		//refactored from this code
-	//	var nearfar = "you can always guess again" // if no lastDistance, don't know if closer or farther so be generic
-
-	// 		if (lastDistance) {// if last distance exists, use it to set a new nearfar response
-	// 	if ((Math.abs(lastDistance) - Math.abs(distance)) > 0) {
-	// 		nearfar = "but you're getting closer!";
-	// 		$("#guess"+guessArray.length).addClass("alert alert-success");
-	// 	} else if ((Math.abs(lastDistance) - Math.abs(distance)) < 0) {
-	// 		nearfar = "and you're getting farther away...";
-	// 		$("#guess"+guessArray.length).addClass("alert alert-danger");
-	// 	}
-	// }
 	}
 
 	function distMessage(dis){
@@ -89,12 +73,8 @@ function guessMessage(dis){
 			return "So so close...more than $5 off ";
 		}
 	}
-	var distance = dis;
-	var distMessage = distMessage(distance);
-	var direcMessage = direcMessage(distance);
-	
-
-
+	var distMessage = distMessage(dis);
+	var direcMessage = direcMessage(dis);
 	return distMessage + " " + direcMessage;
 }
 
@@ -157,9 +137,5 @@ $(document).ready(function(){
 	$("#item-image").attr("src", item.image_src); //update the item image
 	$("#item-name").text(item.title);
 	$("#new_btn").on("click", playAgain);
-	// $("#item-image").on("click", function(){
-	// 		$(this).find("img").attr("src", item.image_src); //update the item image
-
-	// });
 });
 
