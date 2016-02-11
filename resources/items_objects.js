@@ -144,7 +144,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Worldâ€™s Largest Gummy Worm",
+      "title":"World's Largest Gummy Worm",
       "price":"29.97",
       "rounded_price":"30",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/05/Worlds-Largest-Gummy-Worm.jpg?fit=400",
@@ -192,7 +192,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Thorâ€™s Hammer Bottle Opener",
+      "title":"Thor's Hammer Bottle Opener",
       "price":"14.38",
       "rounded_price":"14",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/10/Thors-Hammer-Bottle-Opener.jpg?fit=400",
@@ -264,7 +264,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Worldâ€™s Best Exercise Belt",
+      "title":"World's Best Exercise Belt",
       "price":"27.99",
       "rounded_price":"28",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/10/Worlds-Best-Exercise-Belt.jpg?fit=400",
@@ -704,7 +704,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Mirror Rubikâ€™s Cube",
+      "title":"Mirror Rubik's Cube",
       "price":"3.48",
       "rounded_price":"3",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/07/Mirror-Rubiks-Cube.jpg?fit=400",
@@ -1590,7 +1590,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Assassinâ€™s Creed IV Black Flag T-Shirt",
+      "title":"Assassin's Creed IV Black Flag T-Shirt",
       "price":"17.99",
       "rounded_price":"18",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/06/Mens_Black_Assassins_Creed_Black_Flag_T_Shirt_hi_res.jpg?fit=400",
@@ -1942,7 +1942,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Luxury Remote Controlled Kidâ€™s Car",
+      "title":"Luxury Remote Controlled Kid's Car",
       "price":"299.99",
       "rounded_price":"300",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/09/Luxury-Remote-Controlled-Kids-Car.jpg?fit=400",
@@ -1966,7 +1966,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Sâ€™mores Roasting Rack",
+      "title":"S'mores Roasting Rack",
       "price":"19.44",
       "rounded_price":"19",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/05/Smores-Roasting-Rack.jpg?fit=400",
@@ -2430,7 +2430,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Rubikâ€™s Cube Light",
+      "title":"Rubik's Cube Light",
       "price":"31",
       "rounded_price":"31",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/08/Rubiks-Cube-Light.jpg?fit=400",
@@ -2718,7 +2718,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Batman Arkham Origins â€“ Menâ€™s T-shirt",
+      "title":"Batman Arkham Origins â€“ Men's T-shirt",
       "price":"16.05",
       "rounded_price":"16",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/06/batman-arkham-origins-costume-t-shirt-3.jpg?fit=400",
@@ -2894,7 +2894,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Thorâ€™s Hammer Night Light",
+      "title":"Thor's Hammer Night Light",
       "price":"31.15",
       "rounded_price":"31",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/07/Thors-Hammer-Night-Light.jpg?fit=400",
@@ -2918,7 +2918,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Whereâ€™s Waldo Wall Mural",
+      "title":"Where's Waldo Wall Mural",
       "price":"139",
       "rounded_price":"139",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/09/Wheres-Waldo-Wall-Mural.jpg?fit=400",
@@ -3245,7 +3245,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Teenage Mutant Ninja Turtleâ€™s Harness Booster",
+      "title":"Teenage Mutant Ninja Turtle's Harness Booster",
       "price":"149",
       "rounded_price":"149",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/05/Teenage-Mutant-Ninja-Turtles-Harness-Booster.jpg?fit=400",
@@ -3493,7 +3493,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Assassinâ€™s Creed Jacket",
+      "title":"Assassin's Creed Jacket",
       "price":"39.99",
       "rounded_price":"40",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/09/Assassins-Creed-Jacket.jpeg?fit=400",
@@ -3853,7 +3853,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"7x7x7 Rubikâ€™s Cube",
+      "title":"7x7x7 Rubik's Cube",
       "price":"22.44",
       "rounded_price":"22",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/05/7x7x7-Rubiks-Cube.jpg?fit=400",
@@ -4763,7 +4763,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Hermioneâ€™s Time Turner Necklace",
+      "title":"Hermione's Time Turner Necklace",
       "price":"49",
       "rounded_price":"49",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/09/Hermiones-Time-Turner-Necklace.jpg?fit=400",
@@ -5442,7 +5442,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Worldâ€™s Largest Portable Hammock",
+      "title":"World's Largest Portable Hammock",
       "price":"74.95",
       "rounded_price":"75",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/09/Worlds-Largest-Portable-Hammock.jpg?fit=400",
@@ -5538,7 +5538,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Huge Hersheyâ€™s Bar",
+      "title":"Huge Hershey's Bar",
       "price":"40.99",
       "rounded_price":"41",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/06/Huge-Hersheys-Bar.jpg?fit=400",
@@ -5674,7 +5674,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Worldâ€™s Lightest Solid Matter",
+      "title":"World's Lightest Solid Matter",
       "price":"46.95",
       "rounded_price":"47",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/08/World%E2%80%99s-Lightest-Solid-Matter.jpg?fit=400",
@@ -5817,7 +5817,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"The Night Dad Went to Jail Childrenâ€™s Book",
+      "title":"The Night Dad Went to Jail Children's Book",
       "price":"8.34",
       "rounded_price":"8",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/10/The-Night-Dad-Went-to-Jail-Childrens-Book.jpg?fit=400",
@@ -6361,7 +6361,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Worldâ€™s Largest Box of Nerds",
+      "title":"World's Largest Box of Nerds",
       "price":"22.99",
       "rounded_price":"23",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/06/Worlds-Largest-Box-of-Nerds.jpg?fit=400",
