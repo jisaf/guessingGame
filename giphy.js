@@ -16,7 +16,7 @@ function celebrate () {
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400){
 			data = JSON.parse(request.responseText).data.image_url;
-			console.log(data);
+			//console.log(data);
 			//$("#item-image").attr("src", data);
 			$("body").css("background-image", "url('"+data+"')");
 			//document.getElementById("giphyme").innerHTML = '<center><img src = "'+data+'"  title="GIF via Giphy"></center>';
