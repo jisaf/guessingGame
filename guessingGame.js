@@ -6,8 +6,6 @@ var playersGuess,
 var item = generateWinningNumber(0,820);
 var winningNumber = +item.rounded_price;	
 var hints = 0;
-// var winnerImage;
-//console.log(item);
 
 /* **** Guessing Game Functions **** */
 
@@ -21,20 +19,6 @@ function generateWinningNumber(){
     var item = items[index]; // find item at that index in the items array
 	return item;
 }
-
-// function setWinnerImage(){
-// 	var winnerImgData = new XMLHttpRequest;
-// 	winnerImgData.open("GET", "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration", true);
-// 	console.log()
-// 	winnerImgData.onload = function() {
-// 		if (winnerImgData.status >= 200 && winnerImgData.status < 400){
-// 			winnerImage = JSON.parse(winnerImgData.responseText).data.image_url;
-// 			console.log("data is , ", winnerImage);
-// 			return winnerImage;
-// 		}
-// 	}
-// 	winnerImgData.send();
-// }
 
 // Fetch the Players Guess
 
@@ -122,21 +106,6 @@ function checkGuess(guess, actual){
 	} else {
 		$("#result").text(lowerOrHigher()).addClass("alert-info").show();
 	}
-
-
-
-	//fun with closures below - clearly no idea what I'm doing here.
-	// function addGuess(guess){
-	// 	var guessArr = [];
-	// 	var guessPush = function (guess) {
-	// 		guessArr.push(guess);
-	// 		return console.log(guessArr);
-	// 	};
-	// 	return guessPush;
-	// };
-	// var guess = addGuess;
-	// guess(guess);
-	
 }
 
 // Create a provide hint button that provides additional clues to the "Player"
@@ -165,8 +134,6 @@ function provideHint(e){
 // Allow the "Player" to Play Again
 
 function playAgain(e){
-	// add code here
-	// console.log("new game");
 	e.preventDefault();
 	playersGuess = 0,
     guessArray = [];
@@ -180,10 +147,13 @@ function playAgain(e){
 	$("#new_btn").removeClass("btn-primary");
 	$("#result").hide()
 	$("body").css("background-image", "url('')");
-	//console.log(item);
-
 }
 
+function rules(e){
+	e.preventDefault();
+	$("#item-image").toggle();
+	$("#rules").toggle();
+}
 
 Array.prototype.shuffle = function() {
     var input = this;
@@ -206,5 +176,6 @@ $(document).ready(function(){
 	$("#item-image").attr("src", item.image_src); //update the item image
 	$("#item-name").text(item.title);
 	$("#new_btn").on("click", playAgain);
+	$("#huh").on("click", rules);
 });
 
