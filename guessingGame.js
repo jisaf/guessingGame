@@ -7,7 +7,7 @@ var item = generateWinningNumber(0,820);
 var winningNumber = +item.rounded_price;	
 var hints = 0;
 // var winnerImage;
-console.log(item);
+//console.log(item);
 
 /* **** Guessing Game Functions **** */
 
@@ -19,11 +19,6 @@ function generateWinningNumber(){
     };
     var index = rand(0,820); // set index to the result of the function. REFACTOR FOR CLOSURE
     var item = items[index]; // find item at that index in the items array
-	//winningNumber = +item.rounded_price // set the winning number to the rounded price of the item object, +make it a number
-	//console.log(item.image_src);
-	//console.log("returned image = ", setWinnerImage());
-	//item.winner = setWinnerImage()
-	//console.log(winnerImage);
 	return item;
 }
 
@@ -122,8 +117,6 @@ function checkGuess(guess, actual){
 		$("#guess_btn").removeClass("btn-primary");
 		$("#new_btn").addClass("btn-primary");
 		$(".jumbotron").hide();
-		// $("#gifyme").show();
-		// $("#item-image").hide();
 		celebrate();
 
 	} else {
@@ -178,7 +171,6 @@ function playAgain(){
 	item = generateWinningNumber(0,820);
 	winningNumber = +item.rounded_price;	
 	hints = 0;
-	//winnerImage = setWinnerImage()
 	$(".guess_box").text(" .. ");
 	$("#guess_btn").addClass("btn-primary");
 	$("#new_btn").removeClass("btn-primary");
