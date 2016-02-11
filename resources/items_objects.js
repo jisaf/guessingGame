@@ -6320,7 +6320,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"William Shakespeareâ€™s The Jedi Doth Return",
+      "title":"William Shakespeare's The Jedi Doth Return",
       "price":"9.43",
       "rounded_price":"9",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/10/William-Shakespeares-The-Jedi-Doth-Return.jpg?fit=400",

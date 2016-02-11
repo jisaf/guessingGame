@@ -67,7 +67,8 @@
 		<div>
 			<div class="col-md-6 col-sm-6">
 				<div class="well">
-					<p><span id="item-name"></span>: What's the cost on Amazon?</p>
+					<H3 id="item-name"></h3>
+					<p>What's the cost on Amazon?</p>
 				</div>
 				<div class="col-md-12 col-sm-12">
 					<form class="form-inline">
@@ -79,32 +80,26 @@
 								<div class="input-group-addon">.00</div>
 							</div>
 							<button type="submit" class="btn btn-primary" id="guess_btn">Guess!</button>
+							<button type="submit" class="btn btn-info" id="new_btn">New Item</button>
 						</div>
 					</form>
 				</div>
 				<div class="col-md-12 col-sm-12">
 					<br />
+					<div class="alert alert-info" id="result"></div>
 					<table class="table table-bordered table-responsive">
 						<tr>
-							<td class="trow" id="guess1"> .. </td> <!-- use sprites for closer/farther: if (new guess - actual) - (old guess - actual) < 0 = red, otherwise green -->
-							<td class="" id="guess2"> .. </td>
-							<td class="" id="guess3"> .. </td>
-							<td class="" id="guess4"> .. </td>
-							<td class="" id="guess5"> .. </td>
+							<td id="guess1"> .. </td> <!-- use sprites for closer/farther: if (new guess - actual) - (old guess - actual) < 0 = red, otherwise green -->
+							<td id="guess2"> .. </td>
+							<td id="guess3"> .. </td>
+							<td id="guess4"> .. </td>
+							<td id="guess5"> .. </td>
 						</tr>
-						<tr>
-							<td class="" id="hilo1"> .. </td> <!-- use sprites for closer/farther: if (new guess - actual) - (old guess - actual) < 0 = red, otherwise green -->
-							<td class="" id="hilo2"> .. </td>
-							<td class="" id="hilo3"> .. </td>
-							<td class="" id="hilo4"> .. </td>
-							<td class="" id="hilo5"> .. </td>
 					</table>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6">
 				<img class="img-responsive" id="item-image" src=""/>
-				<br />
-				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 			</div>
 
 		</div>

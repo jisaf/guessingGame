@@ -4,8 +4,7 @@
 var playersGuess,
     winningNumber, 
     guessArray = [],
-    guessCount = 0,
-    lastDistance;
+    guessCount = 0;
 var item = generateWinningNumber(0,820);
 console.log(item);
 
@@ -40,47 +39,107 @@ function playersGuessSubmission(e){
 
 // Determine if the next guess should be a lower or higher number
 
-function lowerOrHigher(){
-	// add code here
-	var distance = playersGuess - winningNumber; // how far were they?
-	console.log("distance ", distance);
-	console.log("difference ", lastDistance-distance);
-	var nearfar = "you can always guess again" // if no lastDistance, don't know if closer or farther so be generic
+//called in last if/else of checkGuess()
+//dist replaces lowerOrHigher()
+var dist = function(){
+	// var distance;
+	// var lastDistance;
+	// var drift;
+	return function (guess, actual){
+		distance = guess - actual;
+		drift = ((Math.abs(lastDistance) - Math.abs(distance)));
+		lastDistance = distance;
+		console.log("dist ran");
+	}
+}
+var distance = dist();//call distance(playerGuess, winningNumber) in checkGuess...should be a closure so should store variables....
+// distance(playersGuess, winningNumber);
+// // replaced by dist
+// function lowerOrHigher(){
+// 	// add code here
+// 	var dist = function(){
+// 		var distance = 0;
+// 		return function (guess, actual){
+// 			distance = guess - actual
+// 		}
+// 	}
+// 	var distance = dist;
+// 	distance(playersGuess, winningNumber);
+// 	// var distance = playersGuess - winningNumber; // how far were they?
+// 	console.log("distance ", distance);
+// 	var diff = function(last, current){
+// 		return function(){
+
+// 		}
+// 	}
+// 	console.log("difference ", lastDistance-distance);
+
+// 	firstGuess()
+// 	guessMessage(distance);
+
+
+// }
+
+//what message are we giving the player
+
+function guessMessage(){
+	console.log("guessMessage ran");
+	console.log("playersGuess is, ", playersGuess);
+	distance(playersGuess, winningNumber);
+	var nearfar = "you can always guess again"; // if no lastDistance, don't know if closer or farther so be generic
+	var alertStatus = ""; // what alert are we using?
+	// if it's a first guess, return something special
+	if (guessArray.length === 0) {
+		if (distance > 0){
+			return "Good first guess, try coming down a bit though";
+		} else if (distance < 0) {
+			return "Good first guess, try going up a bit though";
+		}
+	}
+
+	//if it's not a first guess, set a new nearfar message 
+	console.log("lastDistance is ", lastDistance);
+	console.log("drift is ", drift);
 	if (lastDistance) {// if last distance exists, use it to set a new nearfar response
-		if ((Math.abs(lastDistance) - Math.abs(distance)) > 0) {
-			nearfar = "but you're getting closer!";
-			$("#guess"+guessArray.length).addClass("alert alert-success");
-		} else if ((Math.abs(lastDistance) - Math.abs(distance)) < 0) {
+		if (drift > 0) {
+			nearfar = "and you're getting closer!";
+			$("#guess"+guessArray.length).addClass("alert alert-sucess");
+			//alertStatus = "success";
+		} else if (drift < 0) {
 			nearfar = "and you're getting farther away...";
+			// alertStatus = "danger";
 			$("#guess"+guessArray.length).addClass("alert alert-danger");
 		}
 	}
-	if (!lastDistance && distance > 0) { // distance === 0 already handled in checkGuess
-		lastDistance = distance;
-		return "Good first guess, try coming down a bit though"
-	} else if (!lastDistance && distance < 0) {
-		lastDistance = distance;
-		return "Good first guess, try going up a bit though"
-	} else if (Math.abs(distance) < 5){
-		lastDistance = distance;
+
+	//deprecated - moved into distance() and first if statement
+	// 	var firstGuess = function (){
+	// 	if (!lastDistance && distance > 0) { // distance === 0 already handled in checkGuess
+	// 		lastDistance = distance;
+	// 		return "Good first guess, try coming down a bit though"
+	// 	} else if (!lastDistance && distance < 0) {
+	// 		lastDistance = distance;
+	// 		return "Good first guess, try going up a bit though"
+	// 	}
+	// }
+
+	if (Math.abs(distance) < 5){
+		// $("#guess"+guessArray.length).addClass("alert alert-"+alertStatus);
 		return "You're REALLY close!"
 	} else if (Math.abs(distance) > 100){
-		lastDistance = distance;
+		// $("#guess"+guessArray.length).addClass("alert alert-"+alertStatus);
 		return "Yeah...you don't really know what things cost do you?"
 	} else if (Math.abs(distance) > 50){
-		lastDistance = distance;
+		// $("#guess"+guessArray.length).addClass("alert alert-"+alertStatus);
 		return "You're pretty far off, "+ nearfar;
 	} else if (Math.abs(distance) > 10){
-		lastDistance = distance;
+		// $("#guess"+guessArray.length).addClass("alert alert-"+alertStatus);
 		return "You're more than $10 off " + nearfar;
 	} else if (Math.abs(distance) > 5){
-		lastDistance = distance;
-
+		// $("#guess"+guessArray.length).addClass("alert alert-"+alertStatus);
 		return "So so close...more than $5 off " + nearfar;
 	}
-
 }
-
 // Check if the Player's Guess is the winning number 
 
 function checkGuess(guess, actual){
@@ -103,7 +162,8 @@ function checkGuess(guess, actual){
 		$("#guess_btn").hide();
 		$("#new_btn").show();
 	} else {
-		$("#result").text(lowerOrHigher()).addClass("alert-info").show();
+		console.log(guessMessage());
+		$("#result").text(guessMessage()).addClass("alert-info").show();
 	}
 
 
