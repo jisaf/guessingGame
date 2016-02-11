@@ -112,7 +112,7 @@ function checkGuess(guess, actual){
 		$("#guess_btn").removeClass("btn-primary");
 		$("#new_btn").addClass("btn-primary");
 	} else if (guess === actual) {
-		$("#result").text("Winner!").addClass("alert-success").fadeIn(0).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+		$("#result").text("Winner!").addClass("alert-success").fadeIn(0).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
 		$("#guess"+guessArray.length).addClass("alert alert-success");
 		$("#guess_btn").removeClass("btn-primary");
 		$("#new_btn").addClass("btn-primary");
@@ -150,11 +150,11 @@ function provideHint(e){
 		itemsArr.push(item.rounded_price);
 		itemsArr.push(generateWinningNumber(0,820).rounded_price);
 		itemsArr.push(generateWinningNumber(0,820).rounded_price);
-		console.log(itemsArr);
+		// console.log(itemsArr);
 		itemsArr.shuffle();
-		console.log(itemsArr);
-		var hint = "This item probably costs $" + itemsArr.join(" or $	");
-		console.log(hint)
+		// console.log(itemsArr);
+		var hint = "This item probably costs $" + itemsArr.join(" or $");
+		// console.log(hint)
 		hints ++;
 		$("#result").text(hint).addClass("alert-warning").show();
 	} else {
@@ -166,7 +166,7 @@ function provideHint(e){
 
 function playAgain(e){
 	// add code here
-	console.log("new game");
+	// console.log("new game");
 	e.preventDefault();
 	playersGuess = 0,
     guessArray = [];
@@ -178,6 +178,8 @@ function playAgain(e){
 	$(".guess_box").text(" .. ").removeClass("alert alert-danger").removeClass("alert alert-success")
 	$("#guess_btn").addClass("btn-primary");
 	$("#new_btn").removeClass("btn-primary");
+	$("#result").hide()
+	$("body").css("background-image", "url('')");
 	//console.log(item);
 
 }
