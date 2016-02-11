@@ -6,6 +6,7 @@ var playersGuess,
 var item = generateWinningNumber(0,820);
 var winningNumber = +item.rounded_price;	
 var hints = 0;
+// var winnerImage;
 console.log(item);
 
 /* **** Guessing Game Functions **** */
@@ -20,8 +21,25 @@ function generateWinningNumber(){
     var item = items[index]; // find item at that index in the items array
 	//winningNumber = +item.rounded_price // set the winning number to the rounded price of the item object, +make it a number
 	//console.log(item.image_src);
+	//console.log("returned image = ", setWinnerImage());
+	//item.winner = setWinnerImage()
+	//console.log(winnerImage);
 	return item;
 }
+
+// function setWinnerImage(){
+// 	var winnerImgData = new XMLHttpRequest;
+// 	winnerImgData.open("GET", "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=celebration", true);
+// 	console.log()
+// 	winnerImgData.onload = function() {
+// 		if (winnerImgData.status >= 200 && winnerImgData.status < 400){
+// 			winnerImage = JSON.parse(winnerImgData.responseText).data.image_url;
+// 			console.log("data is , ", winnerImage);
+// 			return winnerImage;
+// 		}
+// 	}
+// 	winnerImgData.send();
+// }
 
 // Fetch the Players Guess
 
@@ -53,6 +71,8 @@ function guessMessage(dis){
 		} else if (drift < 0) {
 			$("#guess"+guessArray.length).addClass("alert alert-danger");
 			return "and you're getting farther away...";
+		} else {
+			return "";
 		}
 	}
 
@@ -69,8 +89,8 @@ function guessMessage(dis){
 			return "You're pretty far off, "
 		} else if (Math.abs(dis) > 10){
 			return "You're more than $10 off "
-		} else if (Math.abs(dis) > 5){
-			return "So so close...more than $5 off ";
+		} else if (Math.abs(dis) >= 5){
+			return "So so close...a bit more than $5 off ";
 		}
 	}
 	var distMessage = distMessage(dis);
@@ -97,10 +117,15 @@ function checkGuess(guess, actual){
 		$("#guess_btn").removeClass("btn-primary");
 		$("#new_btn").addClass("btn-primary");
 	} else if (guess === actual) {
-		$("#result").text("Winner!").addClass("alert-success").show();
+		$("#result").text("Winner!").addClass("alert-success").fadeIn(0).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
 		$("#guess"+guessArray.length).addClass("alert alert-success");
 		$("#guess_btn").removeClass("btn-primary");
 		$("#new_btn").addClass("btn-primary");
+		$(".jumbotron").hide();
+		// $("#gifyme").show();
+		// $("#item-image").hide();
+		celebrate();
+
 	} else {
 		$("#result").text(lowerOrHigher()).addClass("alert-info").show();
 	}
@@ -153,6 +178,7 @@ function playAgain(){
 	item = generateWinningNumber(0,820);
 	winningNumber = +item.rounded_price;	
 	hints = 0;
+	//winnerImage = setWinnerImage()
 	$(".guess_box").text(" .. ");
 	$("#guess_btn").addClass("btn-primary");
 	$("#new_btn").removeClass("btn-primary");

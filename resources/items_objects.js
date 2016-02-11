@@ -5323,7 +5323,7 @@ var items = [
       "\r":""
    },
    {  
-      "title":"Honeywellâ€™s Lyric Thermostat",
+      "title":"Honeywell's Lyric Thermostat",
       "price":"220",
       "rounded_price":"220",
       "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/06/honeywell.jpg?fit=400",

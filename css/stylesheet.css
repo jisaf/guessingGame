@@ -1,5 +1,6 @@
 body {
 	background-color: #555;
+	background-image: ;
 }
 
 .header_image {
@@ -20,4 +21,7 @@ body {
 }
 #new_btn {
 	/*display: none;*/
+}
+.hidden {
+	display: none;
 }
