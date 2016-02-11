@@ -2,9 +2,10 @@
 // try to elminate these global variables in your project, these are here just to start.
 
 var playersGuess,
-    winningNumber, 
-    guessArray = [],
+    guessArray = [];
 var item = generateWinningNumber(0,820);
+var winningNumber = +item.rounded_price;	
+var hints = 0;
 console.log(item);
 
 /* **** Guessing Game Functions **** */
@@ -17,10 +18,9 @@ function generateWinningNumber(){
     };
     var index = rand(0,820); // set index to the result of the function. REFACTOR FOR CLOSURE
     var item = items[index]; // find item at that index in the items array
-	winningNumber = +item.rounded_price // set the winning number to the rounded price of the item object, +make it a number
-	console.log(item.image_src);
+	//winningNumber = +item.rounded_price // set the winning number to the rounded price of the item object, +make it a number
+	//console.log(item.image_src);
 	return item;
-
 }
 
 // Fetch the Players Guess
@@ -120,8 +120,25 @@ function checkGuess(guess, actual){
 
 // Create a provide hint button that provides additional clues to the "Player"
 
-function provideHint(){
+function provideHint(e){
 	// add code here
+	// generate 2 additional random items. on first guess, show 3 prices. on second guess, show names of items
+	e.preventDefault();
+	if (hints === 0){
+	var itemsArr = [];
+		itemsArr.push(item.rounded_price);
+		itemsArr.push(generateWinningNumber(0,820).rounded_price);
+		itemsArr.push(generateWinningNumber(0,820).rounded_price);
+		console.log(itemsArr);
+		itemsArr.shuffle();
+		console.log(itemsArr);
+		var hint = "This item probably costs $" + itemsArr.join(" or $");
+		console.log(hint)
+		hints ++;
+		$("#result").text(hint).addClass("alert-warning").show();
+	} else {
+		$("#result").text("You've already had your guess! \n Remember what it was?").addClass("alert-warning").show();
+	}
 }
 
 // Allow the "Player" to Play Again
@@ -131,9 +148,24 @@ function playAgain(){
 }
 
 
+Array.prototype.shuffle = function() {
+    var input = this;
+     
+    for (var i = input.length-1; i >=0; i--) {
+     
+        var randomIndex = Math.floor(Math.random()*(i+1)); 
+        var itemAtIndex = input[randomIndex]; 
+         
+        input[randomIndex] = input[i]; 
+        input[i] = itemAtIndex;
+    }
+    return input;
+}
+
 /* **** Event Listeners/Handlers ****  */
 $(document).ready(function(){
 	$("#guess_btn").on("click", playersGuessSubmission);
+	$("#hint_btn").on("click", provideHint);
 	$("#item-image").attr("src", item.image_src); //update the item image
 	$("#item-name").text(item.title);
 	$("#new_btn").on("click", playAgain);
