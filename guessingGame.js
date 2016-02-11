@@ -164,16 +164,21 @@ function provideHint(e){
 
 // Allow the "Player" to Play Again
 
-function playAgain(){
+function playAgain(e){
 	// add code here
+	console.log("new game");
+	e.preventDefault();
 	playersGuess = 0,
     guessArray = [];
 	item = generateWinningNumber(0,820);
 	winningNumber = +item.rounded_price;	
 	hints = 0;
-	$(".guess_box").text(" .. ");
+	$("#item-image").attr("src", item.image_src); //update the item image
+	$("#item-name").text(item.title);
+	$(".guess_box").text(" .. ").removeClass("alert alert-danger").removeClass("alert alert-success")
 	$("#guess_btn").addClass("btn-primary");
 	$("#new_btn").removeClass("btn-primary");
+	//console.log(item);
 
 }
 
