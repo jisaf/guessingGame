@@ -95,7 +95,7 @@ function playAgain(){
 $(document).ready(function(){
 	$("#guess_btn").on("click", playersGuessSubmission);
 	$("#item-image").attr("src", item.image_src); //update the item image
-$("#item-name").text(item.title);
+	$("#item-name").text(item.title);
 	// $("#item-image").on("click", function(){
 	// 		$(this).find("img").attr("src", item.image_src); //update the item image
 
