@@ -4,8 +4,7 @@
 var playersGuess,
     winningNumber, 
     guessArray = [],
-    guessCount = 0,
-    lastDistance;
+    lastDistance; // refactor to use guessArray, we already have this info.
 var item = generateWinningNumber(0,820);
 console.log(item);
 
@@ -43,9 +42,20 @@ function playersGuessSubmission(e){
 function lowerOrHigher(){
 	// add code here
 	var distance = playersGuess - winningNumber; // how far were they?
+	if (guessArray.length < 2) {
+		distance = 0; 
+	} else {
+		distance = playersGuess - winningNumber
+	}
 	console.log("distance ", distance);
 	console.log("difference ", lastDistance-distance);
+	
+
+
+//refactor below into guessMessage();
 	var nearfar = "you can always guess again" // if no lastDistance, don't know if closer or farther so be generic
+
+
 	if (lastDistance) {// if last distance exists, use it to set a new nearfar response
 		if ((Math.abs(lastDistance) - Math.abs(distance)) > 0) {
 			nearfar = "but you're getting closer!";
@@ -92,9 +102,8 @@ function checkGuess(guess, actual){
 		};
 	}
 	guessArray.push(guess); //add guess to the array to store it
-	guessCount++; // increment guessCount so they can't go over 5
 	$("#guess"+guessArray.length).text(guess);//insert guess into results box
-	if (guessCount >= 5 && guess != actual) {
+	if (guessArray.length >= 5 && guess != actual) {
 		$("#result").text("Sorry, you lost! The actual price is " + winningNumber).addClass("alert-danger").show();
 		$("#guess"+guessArray.length).addClass("alert alert-danger");
 	} else if (guess === actual) {
