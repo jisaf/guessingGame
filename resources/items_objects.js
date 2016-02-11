@@ -737,11 +737,10 @@ var items = [
    },
    {  
       "title":"Paintball Machine Gun",
-      "price":"\"4",
-      "rounded_price":"548.7\"",
-      "image_src":"4",
+      "price":"4548.70",
+      "rounded_price":"4549",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/08/Paintball-Machine-Gun.jpg?fit=400",
       "":"549\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/08/Paintball-Machine-Gun.jpg?fit=400"
    },
    {  
       "title":"Mini Pool Table",
@@ -985,11 +984,10 @@ var items = [
    },
    {  
       "title":"River Jet Tub",
-      "price":"\"10",
-      "rounded_price":"764.61\"",
-      "image_src":"10",
+      "price":"10764.61",
+      "rounded_price":"10765",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/07/River-Jet-Tub.jpg?fit=400",
       "":"765\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/07/River-Jet-Tub.jpg?fit=400"
    },
    {  
       "title":"Remote Control LED Computer Lights",
@@ -1625,11 +1623,11 @@ var items = [
    },
    {  
       "title":"LED Sectional Sofa",
-      "price":"\"3",
+      "price":"3",
       "rounded_price":"779\"",
       "image_src":"3",
       "":"779\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/10/LED-Sectional-Sofa.jpg?fit=400"
+      "\r":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/10/LED-Sectional-Sofa.jpg?fit=400"
    },
    {  
       "title":"Pine Cone Ceiling Light",
@@ -3041,11 +3039,10 @@ var items = [
    },
    {  
       "title":"Retro Arcade Table",
-      "price":"\"1",
-      "rounded_price":"589.99\"",
-      "image_src":"1",
+      "price":"1589.99",
+      "rounded_price":"1590\"",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/06/Retro-Arcade-Table.jpg?fit=400",
       "":"590\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/06/Retro-Arcade-Table.jpg?fit=400"
    },
    {  
       "title":"Heart Straws",
@@ -3553,11 +3550,11 @@ var items = [
    },
    {  
       "title":"Remote Control Electric Skateboard",
-      "price":"\"1",
+      "price":"1",
       "rounded_price":"499\"",
       "image_src":"1",
       "":"499\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/11/Remote-Control-Electric-Skateboard.jpg?fit=400"
+      "\r":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/11/Remote-Control-Electric-Skateboard.jpg?fit=400"
    },
    {  
       "title":"Multi-Tool Key",
@@ -3904,20 +3901,18 @@ var items = [
       "\r":""
    },
    {  
-      "title":"\"Past",
-      "price":" Present",
-      "rounded_price":" Future Watch\"",
-      "image_src":"125",
-      "":"125",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/07/Past-Present-Future-Watch.jpg?fit=400"
+      "title":"Past, Present, Future Watch",
+      "price":"125",
+      "rounded_price":"125",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/07/Past-Present-Future-Watch.jpg?fit=400",
    },
    {  
       "title":"Professional Video Drone",
-      "price":"\"1",
-      "rounded_price":"175\"",
-      "image_src":"1",
+      "price":"175",
+      "rounded_price":"175",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/02/Professional-Video-Drone.jpg?fit=400",
       "":"175\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/02/Professional-Video-Drone.jpg?fit=400"
+      "\r":""
    },
    {  
       "title":"Marinade Infusing Meat Tenderizer",
@@ -3977,11 +3972,10 @@ var items = [
    },
    {  
       "title":"Huge Inflatable Water Slide",
-      "price":"\"1",
+      "price":"1",
       "rounded_price":"999\"",
-      "image_src":"1",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/10/Huge-Inflatable-Water-Slide.jpg?fit=400",
       "":"999\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/10/Huge-Inflatable-Water-Slide.jpg?fit=400"
    },
    {  
       "title":"Harry Potter Wall Clock",
@@ -4074,18 +4068,15 @@ var items = [
    {  
       "title":"Pool Cleaning Robot",
       "price":"999.99",
-      "rounded_price":"\"1",
-      "image_src":"000\"",
-      "":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/09/Pool-Cleaning-Robot.jpg?fit=400",
+      "rounded_price":"1000",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/09/Pool-Cleaning-Robot.jpg?fit=400",
       "\r":"300\""
    },
    {  
       "title":"Insanely Huge Camera Lens",
-      "price":"\"25",
-      "rounded_price":"999\"",
-      "image_src":"25",
-      "":"999\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/08/Insanely-Huge-Camera-Lens.jpg?fit=400"
+      "price":"25,999",
+      "rounded_price":"26000",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/08/Insanely-Huge-Camera-Lens.jpg?fit=400",
    },
    {  
       "title":"Poke Ball Belt",
@@ -4201,11 +4192,10 @@ var items = [
    },
    {  
       "title":"130 Games Arcade Machine",
-      "price":"\"2",
-      "rounded_price":"995\"",
-      "image_src":"2",
+      "price":"2995",
+      "rounded_price":"2995",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/01/130-Games-Arcade-Machine.jpg?fit=400",
       "":"995\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/01/130-Games-Arcade-Machine.jpg?fit=400"
    },
    {  
       "title":"Star Wars Golf Club Headcovers",
@@ -4337,11 +4327,10 @@ var items = [
    },
    {  
       "title":"Swimming Pool Treadmill",
-      "price":"\"1",
-      "rounded_price":"295\"",
-      "image_src":"1",
+      "price":"1295",
+      "rounded_price":"1295",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/10/Swimming-Pool-Treadmill.jpg?fit=400",
       "":"295\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/10/Swimming-Pool-Treadmill.jpg?fit=400"
    },
    {  
       "title":"Mystery Package",
@@ -4417,11 +4406,10 @@ var items = [
    },
    {  
       "title":"Self-Balancing Unicycle",
-      "price":"\"1",
-      "rounded_price":"375\"",
-      "image_src":"1",
+      "price":"1375",
+      "rounded_price":"1375",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/10/Self-Balancing-Unicycle.jpg?fit=400",
       "":"375\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/10/Self-Balancing-Unicycle.jpg?fit=400"
    },
    {  
       "title":"Wireless Solar Keyboard",
@@ -4753,11 +4741,10 @@ var items = [
    },
    {  
       "title":"Fire Powered Hot Tub",
-      "price":"\"3",
-      "rounded_price":"547.97\"",
-      "image_src":"3",
+      "price":"3547.97",
+      "rounded_price":"3548",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/09/Fire-Powered-Hot-Tub.jpg?fit=400",
       "":"548\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/09/Fire-Powered-Hot-Tub.jpg?fit=400"
    },
    {  
       "title":"Produce Covers",
@@ -5425,11 +5412,10 @@ var items = [
    },
    {  
       "title":"Badonkadonk Land Tank",
-      "price":"\"19",
-      "rounded_price":"999.95\"",
-      "image_src":"20",
+      "price":"19999.95",
+      "rounded_price":"20000",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/12/Badonkadonk-Land-Tank.jpg?fit=400",
       "":"000\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/12/Badonkadonk-Land-Tank.jpg?fit=400"
    },
    {  
       "title":"Folding Bedside Shelf",
@@ -5721,11 +5707,10 @@ var items = [
    },
    {  
       "title":"Truck Bed Organizer",
-      "price":"\"1",
-      "rounded_price":"079\"",
-      "image_src":"1",
+      "price":"1079",
+      "rounded_price":"1080",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/04/Truck-Bed-Organizer.jpg?fit=400",
       "":"079\"",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/04/Truck-Bed-Organizer.jpg?fit=400"
    },
    {  
       "title":"Middle Class Problems Book",
@@ -6456,12 +6441,11 @@ var items = [
       "\r":""
    },
    {  
-      "title":"\"Table Monster Salt",
-      "price":" Pepper",
-      "rounded_price":" and Oil Shaker\"",
-      "image_src":"20.07",
+      "title":"Table Monster Salt, Pepper and Oil",
+      "price":"20.07",
+      "rounded_price":"20",
+      "image_src":"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/01/Table-Monster-Salt-Pepper-and-Oil-Shaker.jpg?fit=400",
       "":"20",
-      "\r":"\"http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2015/01/Table-Monster-Salt-Pepper-and-Oil-Shaker.jpg?fit=400"
    },
    {  
       "title":"Foldable Water Bottle",

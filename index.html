@@ -80,8 +80,8 @@
 								<div class="input-group-addon">.00</div>
 							</div>
 							<button type="submit" class="btn btn-primary" id="guess_btn">Guess!</button>
-							<button type="submit" class="btn btn-info" id="hint_btn">Hint</button>
-							<button type="submit" class="btn btn-info" id="new_btn">New Item</button>
+							<button type="submit" class="btn" id="hint_btn">Hint</button>
+							<button type="submit" class="btn" id="new_btn">New Game</button>
 						</div>
 					</form>
 				</div>
@@ -90,11 +90,11 @@
 					<div class="alert alert-info" id="result"></div>
 					<table class="table table-bordered table-responsive">
 						<tr>
-							<td id="guess1"> .. </td> <!-- use sprites for closer/farther: if (new guess - actual) - (old guess - actual) < 0 = red, otherwise green -->
-							<td id="guess2"> .. </td>
-							<td id="guess3"> .. </td>
-							<td id="guess4"> .. </td>
-							<td id="guess5"> .. </td>
+							<td class="guess_box" id="guess1"> .. </td> <!-- use sprites for closer/farther: if (new guess - actual) - (old guess - actual) < 0 = red, otherwise green -->
+							<td class="guess_box" id="guess2"> .. </td>
+							<td class="guess_box" id="guess3"> .. </td>
+							<td class="guess_box" id="guess4"> .. </td>
+							<td class="guess_box" id="guess5"> .. </td>
 						</tr>
 					</table>
 				</div>

@@ -82,6 +82,7 @@ function guessMessage(dis){
 
 function checkGuess(guess, actual){
 	// add code here
+		if (guessArray.length > 4) {return};
 	for (var i = -1 ; i < guessArray.length ; i++){ // check if already guessed that number
 		if (guessArray[i] === guess) {
 			$("#result").text("Try again, you've already guessed "+guess).addClass("alert-warning").show();
@@ -93,11 +94,13 @@ function checkGuess(guess, actual){
 	if (guessArray.length >= 5 && guess != actual) {
 		$("#result").text("Sorry, you lost! The actual price is " + winningNumber).addClass("alert-danger").show();
 		$("#guess"+guessArray.length).addClass("alert alert-danger");
+		$("#guess_btn").removeClass("btn-primary");
+		$("#new_btn").addClass("btn-primary");
 	} else if (guess === actual) {
 		$("#result").text("Winner!").addClass("alert-success").show();
 		$("#guess"+guessArray.length).addClass("alert alert-success");
-		$("#guess_btn").hide();
-		$("#new_btn").show();
+		$("#guess_btn").removeClass("btn-primary");
+		$("#new_btn").addClass("btn-primary");
 	} else {
 		$("#result").text(lowerOrHigher()).addClass("alert-info").show();
 	}
@@ -132,7 +135,7 @@ function provideHint(e){
 		console.log(itemsArr);
 		itemsArr.shuffle();
 		console.log(itemsArr);
-		var hint = "This item probably costs $" + itemsArr.join(" or $");
+		var hint = "This item probably costs $" + itemsArr.join(" or $	");
 		console.log(hint)
 		hints ++;
 		$("#result").text(hint).addClass("alert-warning").show();
@@ -145,6 +148,15 @@ function provideHint(e){
 
 function playAgain(){
 	// add code here
+	playersGuess = 0,
+    guessArray = [];
+	item = generateWinningNumber(0,820);
+	winningNumber = +item.rounded_price;	
+	hints = 0;
+	$(".guess_box").text(" .. ");
+	$("#guess_btn").addClass("btn-primary");
+	$("#new_btn").removeClass("btn-primary");
+
 }
 
 
