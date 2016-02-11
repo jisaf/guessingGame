@@ -9,6 +9,11 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- Items to pull from-->
+<script src="./resources/items_objects.js"></script>
+<!-- Game Logic -->
+<script src="./guessingGame.js"></script>
+
 <!-- Custom CSS -->
 <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
@@ -62,7 +67,7 @@
 		<div>
 			<div class="col-md-6 col-sm-6">
 				<div class="well">
-					<p>Portable Pocket SNES Console: How much does it sell for on Amazon?</p>
+					<p><span id="item-name"></span>: What's the cost on Amazon?</p>
 				</div>
 				<div class="col-md-12 col-sm-12">
 					<form class="form-inline">
@@ -73,7 +78,7 @@
 									<input type="text" class="form-control" id="guess" placeholder="Amount">
 								<div class="input-group-addon">.00</div>
 							</div>
-							<button type="submit" class="btn btn-primary" id="guess">Guess!</button>
+							<button type="submit" class="btn btn-primary" id="guess_btn">Guess!</button>
 						</div>
 					</form>
 				</div>
@@ -81,16 +86,25 @@
 					<br />
 					<table class="table table-bordered table-responsive">
 						<tr>
-							<td class="success"> up </td> <!-- use sprites for closer/farther: if (new guess - actual) - (old guess - actual) < 0 = red, otherwise green -->
-							<td class="success"> up </td>
-							<td class="danger"> down </td>
-							<td class="success"> up </td>
-							<td class="success"> up </td>
+							<td class="trow" id="guess1"> .. </td> <!-- use sprites for closer/farther: if (new guess - actual) - (old guess - actual) < 0 = red, otherwise green -->
+							<td class="" id="guess2"> .. </td>
+							<td class="" id="guess3"> .. </td>
+							<td class="" id="guess4"> .. </td>
+							<td class="" id="guess5"> .. </td>
+						</tr>
+						<tr>
+							<td class="" id="hilo1"> .. </td> <!-- use sprites for closer/farther: if (new guess - actual) - (old guess - actual) < 0 = red, otherwise green -->
+							<td class="" id="hilo2"> .. </td>
+							<td class="" id="hilo3"> .. </td>
+							<td class="" id="hilo4"> .. </td>
+							<td class="" id="hilo5"> .. </td>
 					</table>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-6">
-				<img class="img-responsive" src="http://i1.wp.com/ohthethingsyoucanbuy.com/wp-content/uploads/2014/05/Portable-Pocket-SNES-Console.jpg" alt="Portable Pocket SNES Console" />
+				<img class="img-responsive" id="item-image" src=""/>
+				<br />
+				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 			</div>
 
 		</div>
